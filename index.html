@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Membuat Form Pendaftaran Akun Point Blank</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<center><h2>Form Community</h2></center>
+	<div class="login">
+		<form action="#" method="POST" onSubmit="validasi()">
+			<div>
+				<label>Nama Lengkap:</label>
+				<input type="text" name="nama" id="nama" />
+			</div>
+            <div>
+				<label>Nick :</label>
+				<input type="text" name="nick" id="nick" />
+			</div>
+			<div>
+				<label>Email :</label>
+				<input type="email" name="email" id="email" />
+			</div>
+            <div>
+                <label>Tanggal Lahir :</label>
+                <input type="date" name="tanggal" id="tanggal">
+            </div>
+            <div>
+				<label>Asal Kota:</label>
+				<textarea cols="20" rows="2" name="alamat" id="alamat"></textarea>
+			</div>
+			<div>
+				<input type="submit" value="Daftar" class="tombol">
+			</div>
+		</form>
+	</div>
+</body>
+<script type="text/javascript">
+	function validasi() {
+		var nama = document.getElementById("nama").value;
+		var email = document.getElementById("email").value;
+		var alamat = document.getElementById("alamat").value;
+        var tanggal = document.getElementById("tanggal").value;
+        var nick = document.getElementById("nick").value;
+		if (nama != "" && email!="" && alamat !="" && tanggal !="" && nick !="") {
+			return true;
+		}else{
+			alert('Anda harus mengisi data dengan lengkap !');
+		}
+	}
+</script>
+</html>
